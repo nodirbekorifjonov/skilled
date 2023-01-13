@@ -1,0 +1,220 @@
+.main {
+  flex-grow: 1;
+}
+
+.hero {
+  position: relative;
+  padding: 16.1rem 0 18rem;
+  margin-bottom: 4rem;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+    width: 45.7rem;
+
+    h1 {
+      margin-bottom: 2.9rem;
+    }
+
+    p {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__cards {
+    img {
+      display: none;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    background-color: $white-color;
+    box-shadow: 0px 34px 54px rgba(6, 22, 141, 0.158854);
+    border-radius: 15px;
+
+    p {
+      @include fontStyle(1.6rem, 700, 1.75, $grey-color);
+    }
+  }
+
+  &__members {
+    position: absolute;
+    padding: 2rem 5.7rem 1.9rem 2.4rem;
+    right: 5rem;
+  }
+
+  &__hours {
+    position: absolute;
+    padding: 2rem 7.2rem 1.9rem 2.4rem;
+    right: 41rem;
+    bottom: 18rem;
+  }
+
+  @include responsive(laptop) {
+    &__card {
+      p {
+        @include fontStyle(1.4rem, 700, 1.75, $grey-color);
+      }
+    }
+
+    &__members {
+      right: 4rem;
+    }
+
+    &__hours {
+      right: 35rem;
+      bottom: 15rem;
+    }
+  }
+
+  @include responsive(laptopFirst) {
+    padding: 8.1rem 0 14.6rem;
+
+    &__info {
+      width: 39.8rem;
+    }
+
+    &__members {
+      padding: 1.6rem 2rem;
+      top: 3.2rem;
+      right: 2rem;
+    }
+
+    &__hours {
+      padding: 1.6rem 4.5rem 1.6rem 2rem;
+      right: 18rem;
+      bottom: 7rem;
+    }
+  }
+
+  @include responsive(tabletFirst) {
+    padding: 3.8rem 0 5rem;
+    margin-bottom: 4rem;
+    position: static;
+
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__info {
+      text-align: center;
+      width: 80%;
+      margin-bottom: 7rem;
+    }
+
+    &__cards {
+      position: relative;
+      width: 32.7rem;
+      align-self: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        display: block;
+      }
+    }
+
+    &__members {
+      top: -2.4rem;
+      // right: -4rem;
+      right: 0;
+    }
+
+    &__hours {
+      width: 15.5rem;
+      left: 1rem;
+      bottom: -3rem;
+    }
+  }
+
+  @include responsive(mobileFirst) {
+    &__info {
+      width: 34.3rem;
+      text-align: left;
+    }
+  }
+}
+
+.features {
+  padding-bottom: 14rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 8rem 3rem;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+    width: 35rem;
+    padding: 6.4rem 3.2rem 4rem;
+    background-color: $white-color;
+    box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+    border-radius: 15px;
+
+    &:nth-child(1) {
+      background: $primary-gradient;
+    }
+
+    h3 {
+      color: $white-color;
+    }
+
+    h4 {
+      margin-bottom: 2.4rem;
+    }
+
+    p {
+      margin-bottom: 2.4rem;
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        margin-bottom: 5.2rem;
+      }
+    }
+  }
+
+  &__link {
+    position: absolute;
+    @include fontStyle(1.8rem, 700, 1.56, $pink-color);
+    transition: 0.3s ease;
+    bottom: 4rem;
+
+    &:hover {
+      color: $light-pink-color;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: -2.4rem;
+  }
+
+  @include responsive(mobileFirst) {
+    padding-bottom: 8rem;
+    &__list {
+      gap: 4rem;
+    }
+
+    &__item {
+      padding: 5.6rem 2.9rem 3.2rem 2.8rem;
+
+      h2 {
+        margin-bottom: 1.6rem;
+      }
+
+      &:nth-child(1) {
+        padding-top: 2.4rem;
+      }
+    }
+  }
+}

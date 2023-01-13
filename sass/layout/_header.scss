@@ -1,0 +1,18 @@
+.header, .footer {
+  padding: 2.4rem 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@include responsive(tablet) {
+  .sitelogo {
+    img {
+      width: 8.9rem;
+      height: 3.5rem;
+    }
+  }
+}
