@@ -51,13 +51,23 @@
               <h2>1,451</h2>
             </div>
 
-            <img
-              src="./images/hero-img.png"
-              srcset="./images/hero-img.png 1x, ./images/hero-img@2x.png 2x"
-              alt="Girl's image with coffee"
-              width="253"
-              height="253"
-            />
+            <picture>
+              <source
+                media="(max-width: 745px)"
+                src="./images/hero-img.png"
+                srcset="./images/hero-img.png 1x, ./images/hero-img@2x.png 2x"
+                alt="Girl's image with coffee"
+                width="253"
+                height="253"
+              />
+
+              <source
+                media="(max-width: 950px)"
+                srcset="./images/body-bg-tablet.png"
+              />
+
+              <img src="./images/body-bg.png" alt="" />
+            </picture>
           </div>
         </div>
       </section>
