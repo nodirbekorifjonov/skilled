@@ -350,6 +350,7 @@ html {
   height: 100%;
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 ul,
@@ -378,23 +379,14 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-image: url(../../images/body-bg.png);
-  background-repeat: no-repeat;
-  background-position: top right -5rem;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 1100px) {
   body {
     background-position: top right -10rem;
   }
 }
-@media screen and (max-width: 950px) {
-  body {
-    background-image: url(../../images/body-bg-tablet.png);
-    background-repeat: no-repeat;
-    background-position: top 2rem right;
-  }
-}
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 745px) {
   body {
     background: none;
   }
@@ -553,11 +545,11 @@ h4 {
 }
 
 .hero {
-  position: relative;
   padding: 16.1rem 0 18rem;
   margin-bottom: 4rem;
 }
 .hero .container {
+  position: relative;
   display: flex;
   justify-content: space-between;
 }
@@ -571,7 +563,10 @@ h4 {
   margin-bottom: 4rem;
 }
 .hero__cards img {
-  display: none;
+  position: absolute;
+  top: -26.5rem;
+  right: -10rem;
+  z-index: -1;
 }
 .hero__card {
   display: flex;
@@ -589,13 +584,13 @@ h4 {
 .hero__members {
   position: absolute;
   padding: 2rem 5.7rem 1.9rem 2.4rem;
-  right: 5rem;
+  right: 1rem;
 }
 .hero__hours {
   position: absolute;
   padding: 2rem 7.2rem 1.9rem 2.4rem;
-  right: 41rem;
-  bottom: 18rem;
+  right: 35rem;
+  bottom: 0;
 }
 @media screen and (max-width: 1100px) {
   .hero__card p {
@@ -609,7 +604,6 @@ h4 {
   }
   .hero__hours {
     right: 35rem;
-    bottom: 15rem;
   }
 }
 @media screen and (max-width: 950px) {
@@ -619,18 +613,22 @@ h4 {
   .hero__info {
     width: 39.8rem;
   }
+  .hero img {
+    top: -16rem;
+    right: 0;
+  }
   .hero__members {
     padding: 1.6rem 2rem;
-    top: 3.2rem;
+    top: -4.5rem;
     right: 2rem;
   }
   .hero__hours {
     padding: 1.6rem 4.5rem 1.6rem 2rem;
     right: 18rem;
-    bottom: 7rem;
+    bottom: -8rem;
   }
 }
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 745px) {
   .hero {
     padding: 3.8rem 0 5rem;
     margin-bottom: 4rem;
@@ -654,7 +652,7 @@ h4 {
     justify-content: center;
   }
   .hero__cards img {
-    display: block;
+    position: static;
   }
   .hero__members {
     top: -2.4rem;

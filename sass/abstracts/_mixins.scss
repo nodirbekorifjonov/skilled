@@ -19,7 +19,7 @@
       @content;
     }
   } @else if $size == tabletFirst {
-    @media screen and (max-width: 740px) {
+    @media screen and (max-width: 745px) {
       @content;
     }
   } @else if $size == mobileFirst {

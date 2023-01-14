@@ -10,6 +10,7 @@ html {
   height: 100%;
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 ul,
@@ -38,18 +39,19 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-image: url(../../images/body-bg.png);
-  background-repeat: no-repeat;
-  background-position: top right -5rem;
+  overflow-x: hidden;
+  // background-image: url(../../images/body-bg.png);
+  // background-repeat: no-repeat;
+  // background-position: top right -5rem;
 
   @include responsive(laptop) {
     background-position: top right -10rem;
   }
 
   @include responsive(laptopFirst) {
-    background-image: url(../../images/body-bg-tablet.png);
-    background-repeat: no-repeat;
-    background-position: top 2rem right;
+    // background-image: url(../../images/body-bg-tablet.png);
+    // background-repeat: no-repeat;
+    // background-position: top 2rem right;
   }
 
   @include responsive(tabletFirst) {
